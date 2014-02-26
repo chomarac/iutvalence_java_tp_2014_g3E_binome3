@@ -1,4 +1,8 @@
 /* TODO Javadoc ! */
+/**
+ * @author chomarac
+ *
+ */
 public class Joueur {
 
 	/**
