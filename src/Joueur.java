@@ -9,5 +9,6 @@ public class Joueur {
 	 * Nom du joueur
 	 */
 	public String nom ;
-	
+
+    /* TODO Constructeur et getter ? */
 }
