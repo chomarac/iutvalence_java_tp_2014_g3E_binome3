@@ -1,24 +1,19 @@
 /* TODO Javadoc ! */
+/* TODO Nous avions parlÃ© d'un abstract ? */
 public class Bateaux {
-	
-	
-	
-	/**
-	 * nomBateau sert à identifier les noms des bateaux sur le plateau du jeu
-	 */
+    /* TODO Pourquoi nomBateau et pas simplement "nom" ? Dans la classe Bateaux on s'attend Ã  voir des bateauxâ€¦ */
+    /* TODO Est-ce "nom" ou "type" ? */
+	/** Noms du bateau. */
 	public String nomBateau ;
-	
-	/**
-	 * tailleBateau servira à définir la taille des bateaux en fonction de leur nom
-	 */
+	/** Taille du bateau (dÃ©pend du type de bateau). */
 	public int tailleBateau ;
 
 	/**
-	 * 
-	 * @param nom Ce sera le nom attribué aux bateaux (il faudrait trouver une solution afin que le nom du bateau soit choisi parmi une liste prédéfini
+	 * TODO Nous avions parlÃ© d'une classe abstraite.
+	 * @param nom Ce sera le nom attribuï¿½ aux bateaux (il faudrait trouver une solution afin que le nom du bateau soit choisi parmi une liste prï¿½dï¿½fini
 	 * @param taille Ce sera la taille du bateau construit, il faudrait que la taille se fasse en fonction du nom du bateau
 	 */
-	public void Bateau( String nom , int taille ) {
+	public void Bateau(String nom, int taille) {
 		this.nomBateau = nom ;
 		this.tailleBateau = taille ;
 	}
