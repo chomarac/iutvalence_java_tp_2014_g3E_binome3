@@ -4,11 +4,28 @@
  *
  */
 public class Joueur {
+	/** Nom du joueur. */
+	private final String nomJoueur ;
+	private final Grille maGrille;
+	private final Grille saGrille;
 
-	/**
-	 * Nom du joueur
-	 */
-	public String nom ;
+	public Joueur(String nom){
+		nomJoueur = nom;
+		maGrille = new Grille();
+		saGrille = new Grille();
+	}
+		
+	public String getNomJoueur() {
+		return nomJoueur;
+	}
 
-    /* TODO Constructeur et getter ? */
+	public void ajouterBateau(Croiseur croiseur) throws PlacementImpossible {
+		maGrille.tenterPlacerBateau(croiseur);	
+	}
+
+	public void afficherGrilles() {
+		/* méthode pour afficher les grilles du joueur. */
+		
+		
+	}
 }

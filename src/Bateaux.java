@@ -1,20 +1,42 @@
-/* TODO Javadoc ! */
-/* TODO Nous avions parlé d'un abstract ? */
-public class Bateaux {
-    /* TODO Pourquoi nomBateau et pas simplement "nom" ? Dans la classe Bateaux on s'attend à voir des bateaux… */
-    /* TODO Est-ce "nom" ou "type" ? */
-	/** Noms du bateau. */
-	public String nomBateau ;
-	/** Taille du bateau (dépend du type de bateau). */
-	public int tailleBateau ;
-
-	/**
-	 * TODO Nous avions parlé d'une classe abstraite.
-	 * @param nom Ce sera le nom attribu� aux bateaux (il faudrait trouver une solution afin que le nom du bateau soit choisi parmi une liste pr�d�fini
-	 * @param taille Ce sera la taille du bateau construit, il faudrait que la taille se fasse en fonction du nom du bateau
-	 */
-	public void Bateau(String nom, int taille) {
-		this.nomBateau = nom ;
-		this.tailleBateau = taille ;
+/**
+ * Concept abstrait d'un bateau.
+ * 
+ * @author TODO
+ * @version TODO
+ */
+public abstract class Bateaux {
+	/** Type du bateau. */
+	protected String typeBateau;
+	/** Taille du bateau (depend du type de bateau). */
+	protected int tailleBateau;
+	/* Choisir une mod�lisation : ensemble de case ou vecteur. */
+	protected int originX;
+	protected int originY;
+	protected SensBateaux sens;
+	public int getTailleBateau() {
+		return tailleBateau;
 	}
+	public void setTailleBateau(int tailleBateau) {
+		this.tailleBateau = tailleBateau;
+	}
+	public int getOriginX() {
+		return originX;
+	}
+	public void setOriginX(int originX) {
+		this.originX = originX;
+	}
+	public int getOriginY() {
+		return originY;
+	}
+	public void setOriginY(int originY) {
+		this.originY = originY;
+	}
+	public SensBateaux getSens() {
+		return sens;
+	}
+	public void setSens(SensBateaux sens) {
+		this.sens = sens;
+	}
+	
+	
 }
