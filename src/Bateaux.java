@@ -1,3 +1,6 @@
+/* TODO JavaDoc. */
+/* TODO Package. */
+
 /**
  * Concept abstrait d'un bateau.
  * 
@@ -9,34 +12,26 @@ public abstract class Bateaux {
 	protected String typeBateau;
 	/** Taille du bateau (depend du type de bateau). */
 	protected int tailleBateau;
-	/* Choisir une mod�lisation : ensemble de case ou vecteur. */
-	protected int originX;
-	protected int originY;
-	protected SensBateaux sens;
-	public int getTailleBateau() {
-		return tailleBateau;
+    protected int originX;
+    protected int         originY;
+    /* TODO Créer la case SensBateaux. */
+    protected SensBateaux sens;
+
+    public int getTailleBateau() {
+        return tailleBateau;
+    }
+
+    public int getOriginX() {
+        return originX;
+    }
+
+    public int getOriginY() {
+        return originY;
 	}
-	public void setTailleBateau(int tailleBateau) {
-		this.tailleBateau = tailleBateau;
-	}
-	public int getOriginX() {
-		return originX;
-	}
-	public void setOriginX(int originX) {
-		this.originX = originX;
-	}
-	public int getOriginY() {
-		return originY;
-	}
-	public void setOriginY(int originY) {
-		this.originY = originY;
-	}
+
 	public SensBateaux getSens() {
 		return sens;
 	}
-	public void setSens(SensBateaux sens) {
-		this.sens = sens;
-	}
-	
-	
+
+    /* TODO Créer un constructeur avec la taille, l'origine et le sens. */
 }
