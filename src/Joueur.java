@@ -1,7 +1,11 @@
-/* TODO Javadoc ! */
+/* TODO JavaDoc. */
+/* TODO Package. */
+
 /**
- * @author chomarac
+ * TODO
  *
+ * @author TODO
+ * @version TODO
  */
 public class Joueur {
 	/** Nom du joueur. */
@@ -19,13 +23,13 @@ public class Joueur {
 		return nomJoueur;
 	}
 
+    /* TODO Pensez au polymorphisme ! */
 	public void ajouterBateau(Croiseur croiseur) throws PlacementImpossible {
 		maGrille.tenterPlacerBateau(croiseur);	
 	}
 
+    /* TODO Mauvais nom de mÃ©thode !!! */
 	public void afficherGrilles() {
-		/* méthode pour afficher les grilles du joueur. */
-		
-		
+		/* mï¿½thode pour afficher les grilles du joueur. */
 	}
 }
