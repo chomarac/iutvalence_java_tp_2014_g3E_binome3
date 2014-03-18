@@ -1,4 +1,12 @@
 /* TODO JavaDoc. */
+/* TODO Package. */
+
+/**
+ * TODO
+ *
+ * @author TODO
+ * @version TODO
+ */
 public class Case {
 	/** La case est represente par un booleen : vide ou touchee. */
 	public boolean EtatCase;
@@ -11,4 +19,6 @@ public class Case {
 	public Case(boolean etatCase) {
 		EtatCase = etatCase;
 	}
+
+    /* TODO Il manque des méthodes pour changer l'état d'une case. */
 }
