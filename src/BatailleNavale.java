@@ -1,21 +1,19 @@
 /* TODO JavaDoc. */
 /* TODO Package. */
-/* TODO Renommer la classe. */
 
 /**
- * TODO
+ * Le fil conducteur du jeu.
  *
- * @author TODO
- * @version TODO
+ * @author CHOMARAT ANDRE
+ * @version 1.0
  */
-public class BN {
+public class BatailleNavale {
 	private final Joueur joueur1;
 	private final Joueur joueur2;
 	
-	public BN(String nomJoueur1, String nomJoueur2) {
-        /* TODO Pourquoi ne pas utiliser vos paramétres. */
-		joueur1 = new Joueur("Papa");
-		joueur2 = new Joueur("Maman");
+	public BatailleNavale(String nomJoueur1, String nomJoueur2) {
+		joueur1 = new Joueur(nomJoueur1);
+		joueur2 = new Joueur(nomJoueur2);
 	}
 
     public void jouer() {
@@ -26,9 +24,10 @@ public class BN {
         catch (PlacementImpossible e) {
 
         }
-        joueur1.afficherGrilles();
+        
+        /* afficherGrilles(); */
         try {
-            joueur2.ajouterBateau(new Croiseur(2, 2, SensBateaux.SUD));
+            joueur2.ajouterBateau(new Torpilleur(2, 2, SensBateaux.SUD));
         }
         catch (PlacementImpossible e) {
             e.printStackTrace();

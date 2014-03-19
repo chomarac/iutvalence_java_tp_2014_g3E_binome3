@@ -2,10 +2,10 @@
 /* TODO Package. */
 
 /**
- * TODO
+ * Un joueur et ses grilles.
  *
- * @author TODO
- * @version TODO
+ * @author CHOMARAT ANDRE
+ * @version 1.0
  */
 public class Joueur {
 	/** Nom du joueur. */
@@ -23,13 +23,8 @@ public class Joueur {
 		return nomJoueur;
 	}
 
-    /* TODO Pensez au polymorphisme ! */
-	public void ajouterBateau(Croiseur croiseur) throws PlacementImpossible {
-		maGrille.tenterPlacerBateau(croiseur);	
+	public void ajouterBateau(Bateaux bateau) throws PlacementImpossible {
+		maGrille.tenterPlacerBateau(bateau);
 	}
-
-    /* TODO Mauvais nom de méthode !!! */
-	public void afficherGrilles() {
-		/* m�thode pour afficher les grilles du joueur. */
-	}
+	
 }

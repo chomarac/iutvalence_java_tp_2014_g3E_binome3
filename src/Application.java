@@ -2,15 +2,15 @@
 /* TODO Package. */
 
 /**
- * TODO
+ * Application qui lance le jeu.
  *
- * @author TODO
- * @version TODO
+ * @author CHOMARAT ANDRE
+ * @version 1.0
  */
 public class Application {
 	public static void main(String[] args) {
 		/* Coder la demande du nom des joueurs. */
-		BN partie = new BN("Papa","Maman");
+		BatailleNavale partie = new BatailleNavale("Papa","Maman");
 		partie.jouer();
 	}
 }

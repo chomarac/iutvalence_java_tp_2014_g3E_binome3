@@ -4,8 +4,8 @@
 /**
  * Concept abstrait d'un bateau.
  * 
- * @author TODO
- * @version TODO
+ * @author CHOMARAT ANDRE
+ * @version 1.0
  */
 public abstract class Bateaux {
 	/** Type du bateau. */
@@ -13,25 +13,24 @@ public abstract class Bateaux {
 	/** Taille du bateau (depend du type de bateau). */
 	protected int tailleBateau;
     protected int originX;
-    protected int         originY;
-    /* TODO Créer la case SensBateaux. */
+    protected int originY;
     protected SensBateaux sens;
 
-    public int getTailleBateau() {
+    public int taille() {
         return tailleBateau;
     }
 
-    public int getOriginX() {
+    public int x() {
         return originX;
     }
 
-    public int getOriginY() {
+    public int y() {
         return originY;
 	}
 
-	public SensBateaux getSens() {
+	public SensBateaux sens() {
 		return sens;
 	}
 
-    /* TODO Créer un constructeur avec la taille, l'origine et le sens. */
+    
 }
