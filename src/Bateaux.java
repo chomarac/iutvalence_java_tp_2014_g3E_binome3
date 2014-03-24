@@ -1,23 +1,33 @@
-/* TODO JavaDoc. */
 /* TODO Package. */
 
 /**
  * Concept abstrait d'un bateau.
- * 
+ *
  * @author CHOMARAT ANDRE
- * @version 1.0
+ * @version 1.0.0
  */
 public abstract class Bateaux {
-	/** Type du bateau. */
-	protected String typeBateau;
-	/** Taille du bateau (depend du type de bateau). */
-	protected int tailleBateau;
-    protected int originX;
-    protected int originY;
+    /** Type. */
+    protected String      type;
+    /** Taille (depend du type). */
+    protected int         taille;
+    /** TODO. */
+    protected int         originX;
+    /** TODO. */
+    protected int         originY;
+    /** TODO. */
     protected SensBateaux sens;
 
+    protected Bateaux(final String typeBateau, final int tailleBateau, final int origX, final int origY, final SensBateaux sens) {
+        this.type = typeBateau;
+        this.taille = tailleBateau;
+        this.originX = origX;
+        this.originY = origY;
+        this.sens = sens;
+    }
+
     public int taille() {
-        return tailleBateau;
+        return taille;
     }
 
     public int x() {
@@ -26,11 +36,11 @@ public abstract class Bateaux {
 
     public int y() {
         return originY;
-	}
+    }
 
-	public SensBateaux sens() {
-		return sens;
-	}
+    public SensBateaux sens() {
+        return sens;
+    }
 
-    
+
 }

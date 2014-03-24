@@ -1,11 +1,10 @@
-/* TODO JavaDoc. */
 /* TODO Package. */
 
 /**
- * Les cases.
+ * Modélisation des cases de la grille.
  *
  * @author CHOMARAT ANDRE
- * @version 1.0
+ * @version 2.0.0
  */
 public enum Case {
 	VIDE,

@@ -1,16 +1,13 @@
+/* TODO Package. */
+
 /**
- * Bateau contre-torpilleur
+ * Bateau contre-torpilleur.
  *
  * @author CHOMARAT ANDRE
- * @version 1.0
+ * @version 1.0.0
  */
 public class ContreTorpilleur extends Bateaux {
-		public ContreTorpilleur(int i, int j, SensBateaux sens) {
-			this.tailleBateau = 3;
-			this.typeBateau = "Contre-Torpilleur";
-			this.originX = i;
-			this.originY = j;
-			this.sens = sens;
-	}
-
+    public ContreTorpilleur(int i, int j, SensBateaux sens) {
+        super("Contre-Torpilleur", 3, i, j, sens);
+    }
 }

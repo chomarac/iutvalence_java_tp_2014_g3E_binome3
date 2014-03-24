@@ -1,15 +1,13 @@
+/* TODO Package. */
+
 /**
- * Bateau croiseur
+ * Bateau croiseur.
  *
  * @author CHOMARAT ANDRE
- * @version 1.0
+ * @version 1.0.0
  */
 public class Croiseur extends Bateaux {
-	public Croiseur(int i, int j, SensBateaux sens) {
-		this.tailleBateau = 4;
-		this.typeBateau = "Croiseur";
-		this.originX = i;
-		this.originY = j;
-		this.sens = sens;
-	}
+    public Croiseur(int i, int j, SensBateaux sens) {
+        super("Croiseur", 4, i, j, sens);
+    }
 }

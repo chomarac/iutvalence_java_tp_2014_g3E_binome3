@@ -1,3 +1,5 @@
+/* TODO Package. */
+
 /**
  * Sens du bateaux.
  *
@@ -5,23 +7,27 @@
  * @version 1.0
  */
 public enum SensBateaux {
-	SUD(0,1),
+	/** TODO. */
+    SUD(0,1),
+    /** TODO. */
 	EST(1,0);
-	
+
+    /** TODO. */
 	private final int deltaX;
-	private final int deltaY;
-	
-	private SensBateaux(int deltaX, int deltaY) {
-		this.deltaX = deltaX;
-		this.deltaY = deltaY;
-	}
+    /** TODO. */
+    private final int deltaY;
 
-	public int deltaX() {
-		return deltaX;
-	}
+    SensBateaux(int deltaX, int deltaY) {
+        this.deltaX = deltaX;
+        this.deltaY = deltaY;
+    }
 
-	public int deltaY() {
-		return deltaY;
-	}
-	
+    public int deltaX() {
+        return deltaX;
+    }
+
+    public int deltaY() {
+        return deltaY;
+    }
+
 }
