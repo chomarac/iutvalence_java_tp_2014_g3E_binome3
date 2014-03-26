@@ -9,12 +9,12 @@
 public class Joueur {
 	/** Nom du joueur. */
 	private final String nomJoueur ;
-    /** TODO. */
+    /** Grille de la flotte du joueur et les endroits où il  été touché. */
 	private final Grille maGrille;
-    /** TODO. */
+    /** Grille représentant les endroits touchés chez l'adversaire. */
     private final Grille saGrille;
 
-    /** TODO. */
+    /** Création d'un nouveau joueur et de ses grilles. */
     public Joueur(String nom) {
         nomJoueur = nom;
         maGrille = new Grille();
@@ -25,8 +25,8 @@ public class Joueur {
         return nomJoueur;
     }
 
-    /** TODO. */
+    /** On ajoute un bateau et on soulève une exception si ca ne marche pas. */
     public void ajouterBateau(Bateaux bateau) throws PlacementImpossible {
-        maGrille.tenterPlacerBateau(bateau);
+        Bateaux.tenterPlacerBateau(bateau);
 	}
 }

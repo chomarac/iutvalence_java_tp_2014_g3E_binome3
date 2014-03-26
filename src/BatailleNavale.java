@@ -18,22 +18,24 @@ public class BatailleNavale {
 		joueur2 = new Joueur(nomJoueur2);
 	}
 
-    /** TODO. */
+    /** Lancement du jeu */
     public void jouer() {
         /* Demander la place des bateaux du joueur 1. */
         try {
-            joueur1.ajouterBateau(new Croiseur(0, 0, SensBateaux.EST));
+            joueur1.ajouterBateau(new Croiseur(0, 0, SensBateaux.SUD));
         }
         catch (PlacementImpossible e) {
-            /* TODO */
+        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
+        	
+            /* Sortie erreur + redemander placement bateau */
         }
         
         /* afficherGrilles(); */
-        try {
+        /*try {
             joueur2.ajouterBateau(new Torpilleur(2, 2, SensBateaux.SUD));
         }
         catch (PlacementImpossible e) {
-            /* TODO */
-        }
+            /* Sortie erreur + redemander placement bateau */
+       /* }*/
     }
 }

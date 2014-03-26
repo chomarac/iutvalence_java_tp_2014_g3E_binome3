@@ -23,33 +23,8 @@ public class Grille {
         }
     }
 
-    /** TODO. */
+    /** On affiche les grilles. */
     public void afficher() {
     }
-
-
-    /* TODO La génération des positions devrait être faite dans la classe Bateaux. */
-    public void tenterPlacerBateau(Bateaux bateau) throws PlacementImpossible {
-        /* TODO Utiliser des Collections. */
-        // Générer la liste des coordonnées.
-        for (int i = 0; i < bateau.taille(); i++) {
-            for (int j = 0; j < bateau.taille(); j++) {
-                int ix = bateau.x() + (i * bateau.sens().deltaX());
-                int jy = bateau.y() + (j * bateau.sens().deltaY());
-                System.out.println(ix + "," + jy);
-    			/* Vérifier le dépassement en x, en y */
-                if (((ix <= Grille.NOMBRE_DE_LIGNES) && (jy <= Grille.NOMBRE_DE_COLONNES)) || (this.cases[ix][jy] == Case.VIDE)) {
-                    /* TODO Ce n'est pas le bon fonctionnement. Vous devez attendre de valider toutes les positions avant de placer les bateaux. */
-                    this.cases[ix][jy] = Case.BATEAU_SAIN;
-                }
-                else {
-                    throw new PlacementImpossible();
-                }
-            }
-        }
-    		
-    	/* Valider la position. */
-    	/*Position actuelle + (taille-1) soit possible*/
-    	/* Placer le bateau dans la grille. */
-    }
+    
 }

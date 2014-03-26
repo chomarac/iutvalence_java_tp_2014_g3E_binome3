@@ -7,14 +7,14 @@
  * @version 1.0
  */
 public enum SensBateaux {
-	/** TODO. */
+	/** Orientation vers le SUD (bas). */
     SUD(0,1),
-    /** TODO. */
+    /** Orientation vers l'EST (droite). */
 	EST(1,0);
 
-    /** TODO. */
+    /** Coordonnée sur l'axe X de l'orientation (SUD ou EST). */
 	private final int deltaX;
-    /** TODO. */
+    /** Coordonnée sur l'axe Y de l'orientation (SUD ou EST). */
     private final int deltaY;
 
     SensBateaux(int deltaX, int deltaY) {
