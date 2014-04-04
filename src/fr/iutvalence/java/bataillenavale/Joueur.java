@@ -33,6 +33,11 @@ public class Joueur {
 
     /** On ajoute un bateau et on soulève une exception si ca ne marche pas. */
     public void ajouterBateau(Bateaux bateau) throws PlacementImpossible {
-        Bateaux.tenterPlacerBateau(bateau);
+        maGrille.tenterPlacerBateau(bateau);
+	}
+
+	public void afficher() {
+		System.out.println("Joueur : " + nomJoueur);
+		System.out.println("Grille personnelle : " + maGrille.toString());
 	}
 }

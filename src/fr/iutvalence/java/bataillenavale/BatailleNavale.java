@@ -30,8 +30,9 @@ public class BatailleNavale {
             /* Sortie erreur + redemander placement bateau */
         }
         
-        /* afficherGrilles(); */
-        /*try {
+        joueur1.afficher();
+        
+	/*try {
             joueur2.ajouterBateau(new Torpilleur(2, 2, SensBateaux.SUD));
         }
         catch (PlacementImpossible e) {
