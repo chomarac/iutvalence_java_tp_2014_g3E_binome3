@@ -1,4 +1,4 @@
-/* TODO Package. */
+package fr.iutvalence.java.bataillenavale;
 
 /**
  * Une partie de bataille navale.

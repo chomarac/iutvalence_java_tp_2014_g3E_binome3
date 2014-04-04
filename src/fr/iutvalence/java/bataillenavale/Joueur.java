@@ -1,4 +1,10 @@
-/* TODO Package. */
+package fr.iutvalence.java.bataillenavale;
+
+
+
+import fr.iutvalence.java.bataillenavale.Bateaux;
+import fr.iutvalence.java.bataillenavale.Grille;
+import fr.iutvalence.java.bataillenavale.PlacementImpossible;
 
 /**
  * Un joueur et ses grilles.

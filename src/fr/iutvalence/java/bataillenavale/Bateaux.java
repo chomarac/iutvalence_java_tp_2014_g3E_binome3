@@ -1,4 +1,4 @@
-/* TODO Package. */
+package fr.iutvalence.java.bataillenavale;
 
 /**
  * Concept abstrait d'un bateau.

@@ -1,4 +1,4 @@
-/* TODO Package. */
+package fr.iutvalence.java.bataillenavale;
 
 /**
  * Application qui lance le jeu.

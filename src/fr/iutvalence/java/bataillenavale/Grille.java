@@ -1,4 +1,4 @@
-/* TODO Package. */
+package fr.iutvalence.java.bataillenavale;
 
 /**
  * Grille de bataille navale.

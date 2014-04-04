@@ -1,4 +1,4 @@
-/* TODO Package. */
+package fr.iutvalence.java.bataillenavale;
 
 /**
  * Modélisation des cases de la grille.
