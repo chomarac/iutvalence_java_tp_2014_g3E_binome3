@@ -7,8 +7,10 @@ package fr.iutvalence.java.bataillenavale;
  * @version 1.0.0
  */
 public class BatailleNavale {
+	
     /** Premier joueur. */
 	private final Joueur joueur1;
+	
     /** Second joueur. */
 	private final Joueur joueur2;
 
@@ -20,17 +22,20 @@ public class BatailleNavale {
 
     /** Lancement du jeu */
     public void jouer() {
-        /* Demander la place des bateaux du joueur 1. */
+    	
+        /** On demande la place des bateaux du joueur 1. */
         try {
             joueur1.ajouterBateau(new Croiseur(0, 0, SensBateaux.SUD));
         }
         catch (PlacementImpossible e) {
         	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
-            /* Sortie erreur + redemander placement bateau */
+            /* Redemander placement bateau */
         }
         
         joueur1.afficher();
+        
+        joueur2.afficher();
         
 	/*try {
             joueur2.ajouterBateau(new Torpilleur(2, 2, SensBateaux.SUD));

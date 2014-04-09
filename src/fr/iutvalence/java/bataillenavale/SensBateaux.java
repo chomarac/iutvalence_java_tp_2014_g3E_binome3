@@ -8,9 +8,9 @@ package fr.iutvalence.java.bataillenavale;
  */
 public enum SensBateaux {
 	/** Orientation vers le SUD (bas). */
-    SUD(0,1),
+    SUD(1,0),
     /** Orientation vers l'EST (droite). */
-	EST(1,0);
+	EST(0,1);
 
     /** Coordonnée sur l'axe X de l'orientation (SUD ou EST). */
 	private final int deltaX;

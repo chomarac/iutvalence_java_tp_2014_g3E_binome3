@@ -46,5 +46,6 @@ A faire :
 
 afficher les grilles
 retenir la position des bateaux
-Dans bateau, chaque bateau doit "savoir" si il est touché ou pas : tableau de coordonnées, qd il est touché qq part 
+Dans bateau, chaque bateau doit "savoir" si il est touché ou pas : tableau de coordonnées, 
+qd il est touché qq part 
 on enlève la coordonnée du tableau, donc qd le tableau est vide, le bateau est coulé!

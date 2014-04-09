@@ -32,47 +32,38 @@ public class Grille {
 
     /** On affiche les grilles. */
     public String toString() {
-    	String resultat = "_ _ _ _ _ _ _ _";
+    	String resultat = " _ _ _ _ _ _ _ _ _ _\n";
     	for(int numeroDeLigne = 0; numeroDeLigne < Grille.NOMBRE_DE_LIGNES; numeroDeLigne++){
     		resultat += "|";
-    		for(int numerDeColonne = 0; numerDeColonne < Grille.NOMBRE_DE_COLONNES; numerDeColonne++)
-    		{
-    			resultat +="_|";
+    		for(int numerDeColonne = 0; numerDeColonne < Grille.NOMBRE_DE_COLONNES; numerDeColonne++){
+    			resultat += cases[numeroDeLigne][numerDeColonne] + "|";
     		}
+    		resultat += "\n";
     	}
+    	return resultat;
     }
     
     public void tenterPlacerBateau(Bateaux bateau) throws PlacementImpossible {
-        /* TODO Utiliser des Collections. */
-    	
-        // Générer la liste des coordonnées.
+ 	
+    	// Valider les positions
         for (int i = 0; i < bateau.taille(); i++)
         {
                 int x = bateau.x() + (i * bateau.sens().deltaX());
                 int y = bateau.y() + (i * bateau.sens().deltaY());
-                System.out.println(x + "," + y);
-    			/** On vérifie le dépassement en x et en y */
-                
-                
                 if (!((x <= Grille.NOMBRE_DE_LIGNES) && (y <= Grille.NOMBRE_DE_COLONNES)) && (this.cases[x][y] == Case.VIDE)) {
                     throw new PlacementImpossible();
                 }
         }
-        /* TODO Ce n'est pas le bon fonctionnement. Vous devez attendre de valider toutes les positions avant de placer les bateaux. */
+        poserBateau(bateau);
+
+    }
+    
+    private void poserBateau(Bateaux bateau) {
         for (int i = 0; i < bateau.taille(); i++)
         {
                 int x = bateau.x() + (i * bateau.sens().deltaX());
                 int y = bateau.y() + (i * bateau.sens().deltaY());
-                System.out.println(x + "," + y);
-    			/** On vérifie le dépassement en x et en y */
-                
-                
                 this.cases[x][y] = Case.BATEAU_SAIN;
-
         }
-
-    	/* Valider la position. */
-    	/*Position actuelle + (taille-1) soit possible*/
-    	/* Placer le bateau dans la grille. */
     }
 }
