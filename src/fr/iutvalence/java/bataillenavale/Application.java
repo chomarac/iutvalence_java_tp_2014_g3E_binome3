@@ -1,5 +1,7 @@
 package fr.iutvalence.java.bataillenavale;
 
+import java.util.Scanner;
+
 /**
  * Application qui lance le jeu.
  *
@@ -8,8 +10,18 @@ package fr.iutvalence.java.bataillenavale;
  */
 public class Application {
 	public static void main(String[] args) {
-		/* Coder la demande du nom des joueurs. */
-		BatailleNavale partie = new BatailleNavale("Papa","Maman");
+		
+		/**On récupère le nom des joueurs*/
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Veuillez saisir le nom du joueur 1 :");
+		String nomJoueur1 = sc.nextLine();
+		System.out.println("Veuillez saisir le nom du joueur 2 :");
+		String nomJoueur2 = sc.nextLine();
+		
+		/**On crée la partie de bataille navale*/
+		BatailleNavale partie = new BatailleNavale(nomJoueur1,nomJoueur2);
+		
+		/**On lance la partie*/
 		partie.jouer();
 	}
 }

@@ -37,22 +37,29 @@ public abstract class Bateaux {
         this.coordonnees = new HashSet();
     }
 
+    /**Retourne la taille du bateau.*/
     public int taille() {
         return taille;
     }
 
+    /**Retourne l'origine X du bateau.*/
     public int x() {
         return originX;
     }
 
+    /**Retourne l'origine Y du bateau.*/
     public int y() {
         return originY;
     }
 
+    /**Retourne le sens du bateau.*/
     public SensBateaux sens() {
         return sens;
     }
-    
+
+    /**Calcule les coordonnées du bateau 
+     * en fonction de son origine, de sa longueur et de son orientation 
+     * puis les stocke dans une collection.*/
     public void stockerCoordonneesBateau(){
     	for (int i = 0; i < taille(); i++)
         {

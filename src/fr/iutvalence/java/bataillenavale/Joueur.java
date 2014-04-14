@@ -39,14 +39,24 @@ public class Joueur {
 
     /** On ajoute un bateau et on soulève une exception si ca ne marche pas. */
     public void ajouterBateau(Bateaux bateau) throws PlacementImpossible {
+    	
         maGrille.tenterPlacerBateau(bateau);
         bateaux.add(bateau);
         bateau.stockerCoordonneesBateau();
 	}
+    
+    
 
 	public void afficher() {
 		System.out.println("Joueur : " + nomJoueur);
 		System.out.println("Grille personnelle : \n" + maGrille.toString());
 		System.out.println("Reflet de la grille de l'adversaire : \n" + saGrille.toString());
+	}
+	
+	
+	
+	
+	public void attaquerBateau() {
+		
 	}
 }

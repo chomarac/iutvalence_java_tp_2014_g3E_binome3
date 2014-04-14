@@ -1,5 +1,12 @@
 package fr.iutvalence.java.bataillenavale;
 
+
+/**
+ * Les coordonnees des bateaux.
+ *
+ * @author CHOMARAT ANDRE
+ * @version 1.0.0
+ */
 public class Coordonnee {
 	
 	private int x ;
