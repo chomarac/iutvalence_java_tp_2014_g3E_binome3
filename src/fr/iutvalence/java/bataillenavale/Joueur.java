@@ -25,7 +25,7 @@ public class Joueur {
     /** Bateaux du joueur. */
     private Set<Bateaux> bateaux;
     
-    /** Création d'un nouveau joueur et de ses grilles. */
+    /** Creation d'un nouveau joueur et de ses grilles. */
     public Joueur(String nom) {
         nomJoueur = nom;
         maGrille = new Grille();
@@ -46,17 +46,17 @@ public class Joueur {
 	}
     
     
-
+    /**Methode pour afficher le nom du joueur, sa grille, 
+     * et la vue qu'il a de la grille de l'adversaire.*/
 	public void afficher() {
 		System.out.println("Joueur : " + nomJoueur);
-		System.out.println("Grille personnelle : \n" + maGrille.toString());
-		System.out.println("Reflet de la grille de l'adversaire : \n" + saGrille.toString());
+		System.out.println("Grille personnelle : \n\n" + maGrille.toString());
+		System.out.println("Reflet de la grille de l'adversaire : \n\n" + saGrille.toString());
 	}
 	
 	
 	
-	
-	public void attaquerBateau() {
-		
+	/**Methode pour attaquer l'adversaire.*/
+	public void attaquerBateau(int x,int y) {
 	}
 }

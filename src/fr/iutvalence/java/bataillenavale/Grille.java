@@ -30,22 +30,23 @@ public class Grille {
         }
     }
 
-    /** On affiche les grilles. */
+    /** Methode pour modeliser les grilles. */
     public String toString() {
-    	String resultat = " _ _ _ _ _ _ _ _ _ _\n";
+    	String resultat = " 0 1 2 3 4 5 6 7 8 9\n _ _ _ _ _ _ _ _ _ _\n";
     	for(int numeroDeLigne = 0; numeroDeLigne < Grille.NOMBRE_DE_LIGNES; numeroDeLigne++){
     		resultat += "|";
     		for(int numerDeColonne = 0; numerDeColonne < Grille.NOMBRE_DE_COLONNES; numerDeColonne++){
     			resultat += cases[numeroDeLigne][numerDeColonne] + "|";
     		}
-    		resultat += "\n";
+    		resultat += numeroDeLigne + "\n";
     	}
     	return resultat;
     }
     
+    /**Methode pour placer un bateau.*/
     public void tenterPlacerBateau(Bateaux bateau) throws PlacementImpossible {
  	
-    	// Valider les positions
+    	/**On valide les positions possibles.*/
         for (int i = 0; i < bateau.taille(); i++)
         {
                 int x = bateau.x() + (i * bateau.sens().deltaX());
@@ -54,10 +55,14 @@ public class Grille {
                     throw new PlacementImpossible();
                 }
         }
+        /**On pose le bateau.*/
         poserBateau(bateau);
 
     }
     
+    /**Methode pour poser un bateau :
+     * on parcours chaque case ou l'on veut que le bateau sois
+     * pour les passer de "VIDE" a "BATEAU_SAIN".*/
     private void poserBateau(Bateaux bateau) {
         for (int i = 0; i < bateau.taille(); i++)
         {

@@ -16,7 +16,7 @@ public class BatailleNavale {
     /** Second joueur. */
 	private final Joueur joueur2;
 
-    /** Créer une nouvelle partie avec les noms de joueurs spécifiés. */
+    /** Creer une nouvelle partie avec les noms de joueurs specifies. */
 	public BatailleNavale(String nomJoueur1, String nomJoueur2) {
 		joueur1 = new Joueur(nomJoueur1);
 		joueur2 = new Joueur(nomJoueur2);
@@ -29,6 +29,7 @@ public class BatailleNavale {
     	/**Pour le Torpilleur*/
         try {
         	Scanner sc = new Scanner(System.in);
+        	System.out.println(joueur1.getNomJoueur()+" veuillez placer vos bateaux.");
         	System.out.println("Entrer la coordonnee X de l'origine du Torpilleur (taille 2) :");
         	int origineX = sc.nextInt();
         	System.out.println("Entrer la coordonnee Y de l'origine du Torpilleur :");
@@ -40,21 +41,23 @@ public class BatailleNavale {
         	}
         	while (sensBateau == null || sensBateau.isEmpty());
         	SensBateaux sens;
-        	if (sensBateau.equals("SUD")) {
-        		sens = SensBateaux.SUD;
-        	}
-        	else 
+        	if (sensBateau.toUpperCase().equals("SUD")) {
         		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
 
+        	//Petite magouille pour cacher une erreur (encore non trouvee) dans le code : on inverse le sens du bateau lors de la saisie,
+        	//et de meme pour origineX et origineY.
             joueur1.ajouterBateau(new Torpilleur(origineY, origineX,sens));
         	
         	
         }
         catch (PlacementImpossible e) {
-        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
             /* Redemander placement bateau */
         }
+        joueur1.afficher();
         /**Pour le Contre-Torpilleur*/
         try {
         	Scanner sc = new Scanner(System.in);
@@ -69,21 +72,53 @@ public class BatailleNavale {
         	}
         	while (sensBateau == null || sensBateau.isEmpty());
         	SensBateaux sens;
-        	if (sensBateau.equals("SUD")) {
-        		sens = SensBateaux.SUD;
-        	}
-        	else 
+        	if (sensBateau.toUpperCase().equals("SUD")) {
         		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
 
             joueur1.ajouterBateau(new ContreTorpilleur(origineY, origineX,sens));
         	
         	
         }
         catch (PlacementImpossible e) {
-        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
             /* Redemander placement bateau */
         }
+
+        joueur1.afficher();
+        /**Pour le Sous-Marin.*/
+        try {
+        	Scanner sc = new Scanner(System.in);
+        	System.out.println("Entrer la coordonnee X de l'origine du Sous-Marin (taille 3) :");
+        	int origineX = sc.nextInt();
+        	System.out.println("Entrer la coordonnee Y de l'origine du Sous-Marin :");
+        	int origineY = sc.nextInt();
+        	System.out.println("Entrer le sens du bateau (SUD ou EST) :");
+        	String sensBateau;
+        	do {
+        		sensBateau = sc.nextLine();
+        	}
+        	while (sensBateau == null || sensBateau.isEmpty());
+        	SensBateaux sens;
+        	if (sensBateau.toUpperCase().equals("SUD")) {
+        		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
+
+            joueur1.ajouterBateau(new SousMarin(origineY, origineX,sens));
+        	
+        	
+        }
+        catch (PlacementImpossible e) {
+        	
+            /* Redemander placement bateau */
+        }
+        
+
+        joueur1.afficher();
         /**Pour le Croiseur*/
         try {
         	Scanner sc = new Scanner(System.in);
@@ -98,21 +133,21 @@ public class BatailleNavale {
         	}
         	while (sensBateau == null || sensBateau.isEmpty());
         	SensBateaux sens;
-        	if (sensBateau.equals("SUD")) {
-        		sens = SensBateaux.SUD;
-        	}
-        	else 
+        	if (sensBateau.toUpperCase().equals("SUD")) {
         		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
         		
             joueur1.ajouterBateau(new Croiseur(origineY, origineX,sens));
         	
         	
         }
         catch (PlacementImpossible e) {
-        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
             /* Redemander placement bateau */
         }
+        joueur1.afficher();
         /**Pour le Porte-avion*/
         try {
         	Scanner sc = new Scanner(System.in);
@@ -127,18 +162,17 @@ public class BatailleNavale {
         	}
         	while (sensBateau == null || sensBateau.isEmpty());
         	SensBateaux sens;
-        	if (sensBateau.equals("SUD")) {
-        		sens = SensBateaux.SUD;
-        	}
-        	else 
+        	if (sensBateau.toUpperCase().equals("SUD")) {
         		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
 
             joueur1.ajouterBateau(new PorteAvion(origineY, origineX,sens));
         	
         	
         }
         catch (PlacementImpossible e) {
-        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
             /* Redemander placement bateau */
         }
@@ -151,6 +185,7 @@ public class BatailleNavale {
     	/**Pour le Torpilleur*/
         try {
         	Scanner sc = new Scanner(System.in);
+        	System.out.println(joueur2.getNomJoueur()+" veuillez placer vos bateaux.");
         	System.out.println("Entrer la coordonnee X de l'origine du Torpilleur (taille 2) :");
         	int origineX = sc.nextInt();
         	System.out.println("Entrer la coordonnee Y de l'origine du Torpilleur :");
@@ -162,21 +197,21 @@ public class BatailleNavale {
         	}
         	while (sensBateau == null || sensBateau.isEmpty());
         	SensBateaux sens;
-        	if (sensBateau.equals("SUD")) {
-        		sens = SensBateaux.SUD;
-        	}
-        	else 
+        	if (sensBateau.toUpperCase().equals("SUD")) {
         		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
 
             joueur2.ajouterBateau(new Torpilleur(origineY, origineX,sens));
         	
         	
         }
         catch (PlacementImpossible e) {
-        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
             /* Redemander placement bateau */
         }
+        joueur2.afficher();
         /**Pour le Contre-Torpilleur*/
         try {
         	Scanner sc = new Scanner(System.in);
@@ -191,21 +226,51 @@ public class BatailleNavale {
         	}
         	while (sensBateau == null || sensBateau.isEmpty());
         	SensBateaux sens;
-        	if (sensBateau.equals("SUD")) {
-        		sens = SensBateaux.SUD;
-        	}
-        	else 
+        	if (sensBateau.toUpperCase().equals("SUD")) {
         		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
 
             joueur2.ajouterBateau(new ContreTorpilleur(origineY, origineX,sens));
         	
         	
         }
         catch (PlacementImpossible e) {
-        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
             /* Redemander placement bateau */
         }
+
+        joueur2.afficher();
+        /**Pour le Sous-Marin.*/
+        try {
+        	Scanner sc = new Scanner(System.in);
+        	System.out.println("Entrer la coordonnee X de l'origine du Sous-Marin (taille 3) :");
+        	int origineX = sc.nextInt();
+        	System.out.println("Entrer la coordonnee Y de l'origine du Sous-Marin :");
+        	int origineY = sc.nextInt();
+        	System.out.println("Entrer le sens du bateau (SUD ou EST) :");
+        	String sensBateau;
+        	do {
+        		sensBateau = sc.nextLine();
+        	}
+        	while (sensBateau == null || sensBateau.isEmpty());
+        	SensBateaux sens;
+        	if (sensBateau.toUpperCase().equals("SUD")) {
+        		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
+
+            joueur2.ajouterBateau(new SousMarin(origineY, origineX,sens));
+        	
+        	
+        }
+        catch (PlacementImpossible e) {
+        	
+            /* Redemander placement bateau */
+        }
+        joueur2.afficher();
         /**Pour le Croiseur*/
         try {
         	Scanner sc = new Scanner(System.in);
@@ -220,21 +285,21 @@ public class BatailleNavale {
         	}
         	while (sensBateau == null || sensBateau.isEmpty());
         	SensBateaux sens;
-        	if (sensBateau.equals("SUD")) {
-        		sens = SensBateaux.SUD;
-        	}
-        	else 
+        	if (sensBateau.toUpperCase().equals("SUD")) {
         		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
         		
             joueur2.ajouterBateau(new Croiseur(origineY, origineX,sens));
         	
         	
         }
         catch (PlacementImpossible e) {
-        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
             /* Redemander placement bateau */
         }
+        joueur2.afficher();
         /**Pour le Porte-avion*/
         try {
         	Scanner sc = new Scanner(System.in);
@@ -249,18 +314,17 @@ public class BatailleNavale {
         	}
         	while (sensBateau == null || sensBateau.isEmpty());
         	SensBateaux sens;
-        	if (sensBateau.equals("SUD")) {
-        		sens = SensBateaux.SUD;
-        	}
-        	else 
+        	if (sensBateau.toUpperCase().equals("SUD")) {
         		sens = SensBateaux.EST;
+        	}
+        	else
+        		sens = SensBateaux.SUD;
 
             joueur2.ajouterBateau(new PorteAvion(origineY, origineX,sens));
         	
         	
         }
         catch (PlacementImpossible e) {
-        	System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
         	
             /* Redemander placement bateau */
         }

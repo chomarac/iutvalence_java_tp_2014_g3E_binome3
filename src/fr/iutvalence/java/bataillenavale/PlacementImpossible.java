@@ -7,4 +7,7 @@ package fr.iutvalence.java.bataillenavale;
  * @version 1.0.0
  */
 public class PlacementImpossible extends Exception {
+	public PlacementImpossible(){
+		System.err.println("Placement du bateau impossible! Placer votre bateau à nouveau.");
+	}
 }

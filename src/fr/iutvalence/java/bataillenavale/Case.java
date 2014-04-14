@@ -1,11 +1,13 @@
 package fr.iutvalence.java.bataillenavale;
 
 /**
- * Modélisation des cases de la grille.
+ * Modelisation des cases de la grille.
  *
  * @author CHOMARAT ANDRE
  * @version 2.0.0
  */
+
+/**On utilise une enumeration pour les cases.*/
 public enum Case {
 	VIDE ("_"),
 	TIR_MANQUE("X"),

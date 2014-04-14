@@ -10,8 +10,8 @@ import java.util.Set;
  * @version 1.0.0
  */
 public abstract class Bateaux {
-	
-    /** Type. */
+
+	/** Type. */
     protected String type;
     
     /** Taille (depend du type). */
@@ -25,7 +25,8 @@ public abstract class Bateaux {
     
     /** Sens du bateau (EST ou SUD). */
     protected SensBateaux sens;
-
+    
+    /**Collection des coordonnes que le bateau occupe.*/
     protected Set<Coordonnee> coordonnees;
     
     protected Bateaux(final String typeBateau, final int tailleBateau, final int origX, final int origY, final SensBateaux sens) {
@@ -57,7 +58,7 @@ public abstract class Bateaux {
         return sens;
     }
 
-    /**Calcule les coordonnées du bateau 
+    /**Calcule les coordonnees du bateau 
      * en fonction de son origine, de sa longueur et de son orientation 
      * puis les stocke dans une collection.*/
     public void stockerCoordonneesBateau(){
